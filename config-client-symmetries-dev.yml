@@ -1,6 +1,4 @@
 spring:
-  application:
-    name: producter-api
   datasource:
     url: jdbc:mysql://172.17.86.10:3306/producter?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
     #url: jdbc:mysql://172.17.86.10:3306/producter?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull
