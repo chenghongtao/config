@@ -1,0 +1,44 @@
+spring:
+  datasource:
+    url: '{cipher}28553d2435d42e42016692d71381c60be5b0bb156f81c26a1cd38e0a2f4fc2a27b23e433caccd39f72660b906bd6267ae9e468536ca3f6fc97efd77d0ecd48342c1806c7cb444af2ccb8f8d8531fb85e8614628a1981b5af17eab8b011aa562080c2c0d7b01bd3b9fd1c6deaee4d682e89dc174a5e297e845d218e180a1fee7f'
+    #url: jdbc:mysql://172.17.86.10:3306/producter?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull
+    username: '{cipher}cd2db23987d514f392d46810c99e111949d26c95353910801453087b27e98f23'
+    password: '{cipher}f77ac71f16a40ce8bd77c8618f88ddf316e5feb633d2c927b055af13b3052afd'
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+        
+        # 配置初始化大小（默认0）、最小、最大（默认8） 
+    initial-size: 1 
+    min-idle: 1 
+    max-active: 20 
+        # 配置获取连接等待超时的时间 
+    max-wait: 60000 
+        # 是否缓存preparedStatement，也就是PSCache。PSCache对支持游标的数据库性能提升巨大。 默认为false 
+    pool-prepared-statements: true 
+        # 要启用PSCache，必须配置大于0，当大于0时，poolPreparedStatements自动触发修改为true。 
+    max-open-prepared-statements: 20 
+        # 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒 
+    time-between-eviction-runs-millis: 60000 
+        # 配置一个连接在池中最小和最大生存的时间，单位是毫秒 
+    min-evictable-idle-time-millis: 300000 
+    max-evictable-idle-time-millis: 900000 
+        # 用来检测连接是否有效的sql，要求是一个查询语句，常用select 'x'。 
+        # 如果validationQuery为null，testOnBorrow、testOnReturn、testWhileIdle都不会起作用。 
+    validation-query: SELECT 1 
+        # 申请连接时执行validationQuery检测连接是否有效 默认为true 
+    test-on-borrow: true 
+        # 归还连接时执行validationQuery检测连接是否有效 默认为false 
+    test-on-return: false 
+        # 申请连接的时候检测，如果空闲时间大于timeBetweenEvictionRunsMillis，执行validationQuery检测连接是否有效。
+    test-while-idle: true
+    
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh
+        
+## 该配置节点为独立的节点
+mybatis:
+   mapper-locations: classpath:mapper/*.xml  #注意：一定要对应mapper映射xml文件的所在路径
+   type-aliases-package: com.cht.spring.cloud.config.client.model  # 注意：对应实体类的路径
