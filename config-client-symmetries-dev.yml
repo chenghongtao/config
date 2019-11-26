@@ -1,9 +1,9 @@
 spring:
   datasource:
-    url: 28553d2435d42e42016692d71381c60be5b0bb156f81c26a1cd38e0a2f4fc2a27b23e433caccd39f72660b906bd6267ae9e468536ca3f6fc97efd77d0ecd48342c1806c7cb444af2ccb8f8d8531fb85e8614628a1981b5af17eab8b011aa562080c2c0d7b01bd3b9fd1c6deaee4d682e89dc174a5e297e845d218e180a1fee7f
+    url: {cipher}28553d2435d42e42016692d71381c60be5b0bb156f81c26a1cd38e0a2f4fc2a27b23e433caccd39f72660b906bd6267ae9e468536ca3f6fc97efd77d0ecd48342c1806c7cb444af2ccb8f8d8531fb85e8614628a1981b5af17eab8b011aa562080c2c0d7b01bd3b9fd1c6deaee4d682e89dc174a5e297e845d218e180a1fee7f
     #url: jdbc:mysql://172.17.86.10:3306/producter?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull
-    username: cd2db23987d514f392d46810c99e111949d26c95353910801453087b27e98f23
-    password: f77ac71f16a40ce8bd77c8618f88ddf316e5feb633d2c927b055af13b3052afd
+    username: {cipher}cd2db23987d514f392d46810c99e111949d26c95353910801453087b27e98f23
+    password: {cipher}f77ac71f16a40ce8bd77c8618f88ddf316e5feb633d2c927b055af13b3052afd
     driver-class-name: com.mysql.jdbc.Driver
     type: com.alibaba.druid.pool.DruidDataSource
         
