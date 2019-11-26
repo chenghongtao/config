@@ -1,9 +1,9 @@
 spring:
   datasource:
-    url: jdbc:mysql://172.17.86.10:3306/producter?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+    url: 0144db250b1799f1dd58981af4f4959d6cb1f00f9cfd0704bc1847c33601990071f07955216b3e82cffbc1590db896ee8e97944ec06191e24e93ca974651c34ac58fef4f7d36708db01083a849519c4170cf5a74249b4b1fd9fde8c82c86cd41dfc5728908144365eb66f036d178c62161484ef96359f8d77df70226843e2991
     #url: jdbc:mysql://172.17.86.10:3306/producter?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull
-    username: root
-    password: hadoop
+    username: cd2db23987d514f392d46810c99e111949d26c95353910801453087b27e98f23
+    password: f77ac71f16a40ce8bd77c8618f88ddf316e5feb633d2c927b055af13b3052afd
     driver-class-name: com.mysql.jdbc.Driver
     type: com.alibaba.druid.pool.DruidDataSource
         
