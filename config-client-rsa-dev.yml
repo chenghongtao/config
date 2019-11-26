@@ -1,4 +1,14 @@
+server:
+  port: 9102
+  
+eureka:
+  client:
+    serviceUrl:
+       defaultZone: http://localhost:8761/eureka/
+
 spring:
+  application:
+    name: config-client-rsa
   datasource:
     url: '{cipher}28553d2435d42e42016692d71381c60be5b0bb156f81c26a1cd38e0a2f4fc2a27b23e433caccd39f72660b906bd6267ae9e468536ca3f6fc97efd77d0ecd48342c1806c7cb444af2ccb8f8d8531fb85e8614628a1981b5af17eab8b011aa562080c2c0d7b01bd3b9fd1c6deaee4d682e89dc174a5e297e845d218e180a1fee7f'
     #url: jdbc:mysql://172.17.86.10:3306/producter?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull
@@ -31,12 +41,6 @@ spring:
     test-on-return: false 
         # 申请连接的时候检测，如果空闲时间大于timeBetweenEvictionRunsMillis，执行validationQuery检测连接是否有效。
     test-while-idle: true
-    
-management:
-  endpoints:
-    web:
-      exposure:
-        include: refresh
         
 ## 该配置节点为独立的节点
 mybatis:
