@@ -1,2 +1,2 @@
-bus:
-  version: version1.0
+config:
+  version: dev2.0
