@@ -1,2 +1,2 @@
-server:
-  port: version1.0
+bus:
+  version: version1.0
